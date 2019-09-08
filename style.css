@@ -1,7 +1,7 @@
 body{
     margin: 0;
     display: grid;
-    grid-template-rows: 3;
+    grid-template-rows: 4;
     grid-template-columns: 1fr;
 }
 
@@ -179,7 +179,32 @@ body{
     grid-row: 2;
 }
 
+.about{
+    grid-row: 3;
+    height: 300px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;;
+    align-items: center;
+    margin: 0 150px;
+}
+
+.about__st{
+    display: flex;
+    height: 250px;
+    width: 200px;
+    border-left:1px solid #00ffea;
+    border-right:1px solid #00ffea;
+    align-items: center;
+}
+
+.about__img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .footer{
+    grid-row: 4;
     height: 450px;
     display: flex;
     flex-direction: row;
@@ -196,11 +221,16 @@ body{
 }
 
 @media screen and (max-width: 500px){
-
-     .header{
-        width: auto;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 500px;
+    }
+    .header {
+        grid-row: 1;
+        max-width: 500px;
         height: 250px;
-
     }
 
     .container{
@@ -219,13 +249,13 @@ body{
         grid-row: 2;
     }
 
-.info{
+    .info{
     background: none;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     flex-flow: row wrap;
-    height: 400px;
+    height: auto;
         }
 
     .info .unu{
@@ -254,22 +284,16 @@ body{
         width: 400px;
         height: 200px;
         margin: 20px auto;
-        grid-column: 1;
-        grid-row: 1;
         opacity: 1;
 
     }
 
     .card-unu{
-        grid-column: 1;
-        grid-row: 2;
         text-align: center;
         margin-top: 0;
     }
 
     .card-doi{
-        grid-column: 1;
-        grid-row: 2;
         text-align: center;
         margin-top: 0;
     }
@@ -282,19 +306,22 @@ body{
     .welcome{
         display: none;
     }
-
-    .footer{
+     .footer{
         display: flex;
         align-items: center;
         flex-flow:wrap;
         justify-content: center;
-        position: absolute;
-        bottom: -980px; /*sheva ni to )*/
+        background-size: cover;
+        background-position: center;
     }
+
 
     .footer__facebook__text{
         color: white;
     }
 
+    .about{
+        display: none;
+    }
 }
 
